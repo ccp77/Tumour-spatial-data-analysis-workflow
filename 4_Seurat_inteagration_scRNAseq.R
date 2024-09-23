@@ -8,12 +8,13 @@ batch_name <- "IntegrationTake14"
 ######################################### Details of the script ################################################################
 ################################################################################################################################
 
-# This script builds on the Seurat pipelines to integrate three samples of dendritic cell type 1 (cDC1s) in tumours.
+# This script builds on the Seurat pipelines (https://satijalab.org/seurat/) to integrate and analyse jointly three samples of immune cells in tumours.
 # More information on the pipeline can be found on the Seurat website: https://satijalab.org/seurat/articles/integration_introduction
-# 1. Selects cells that are to be kept for this analysis by building what has been discovered in previous steps.
-# 2. Generate seurat objects for the three samples A4, A5 and A6, end keep the cell IDs selected in the step 1
+# Key steps of the script:
+# 1. Selects cells that are to be kept for this analysis (analysis). 
+# 2. Generate seurat objects for the three samples (IDs here are: A4, A5 and A6) end keep the cell IDs selected in the step 1
 # 3. Proceed to Seurat analysis. Integrate to remove batch effect, scale, run PCA and UMAP, cluster using different resolutions (fine tune Louvain)
-#   Select resolution, generate DEGs. Generate Heatmaps, Violoin plots, Feature plots.
+#   Select resolution, generate DEGs. Generate Heatmaps, Violin plots, Feature plots.
 
 
 ################################################################################################################################
