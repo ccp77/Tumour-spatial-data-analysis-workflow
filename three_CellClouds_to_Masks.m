@@ -22,7 +22,7 @@ else
     disp(['Directory already exists: ', output_file_directory]);
 end
 
-point_cloud= readtable([file_directory,single_image_sub_directory,vessel_csv]); % create the mask based on the TCF7 coordinates
+point_cloud= readtable([file_directory,single_image_sub_directory,vessel_csv]); % create the mask based on the vessel coordinates
 
 szy = ceil(max(point_cloud.Y) + 1000);
 szx = ceil(max(point_cloud.X) + 1000);
@@ -68,7 +68,7 @@ hold on;
 scatter(point_cloud.X,point_cloud.Y,2,"black",".")
 
 % prepare the data for export: downsample points in the mask, and add
-% columns if necessary to fin data structure necessary in following
+% columns if necessary to find data structure necessary in following
 % pipelines (For example here add 6 columns with 0 values and with headers
 % matching other csv files that will analysed jointly in a next step.
 
