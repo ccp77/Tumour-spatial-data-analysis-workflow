@@ -8,7 +8,7 @@
 # Set Parameters : -smoothing surface details = 1
 #                  -Background subtraction for local contrast = 4
 #                  -Choose threshold manually
-#                 - enable separation (region growing) using a seed points simager of 5 and a morphological split
+#                 - enable separation (region growing) using a seed points diamater of 5 and morphological split
 
 # Filters the segmented objects based on selected parameters, for example:
 # - Area 
@@ -23,10 +23,12 @@
 ########################################################################################################################
 
 
-# Before running this script: 1: create one folder per sample, and 2. organize imaris output into the respective sample folder
-# create one folder in which all the sample folders are located (here "Excel")
-# The script will go into each sample folder, then into each segmented cell type, 
-# then find the csv files that contain certain values such as "Area", "Postion X", etc. as detailed below
+# Before running this script: 1: create one folder per sample, and create subfolders for each cell types included in the sample.
+#  2. organize imaris output files into the respective sample folder/ cell type subfolders (example "Tumour_10/vessel" subfolder will contain
+# all the exported csv files from imaris for the exported vessel surfaces for Tumour 10.)
+# Create one folder in which all the sample folders are located (here "Excel")
+# The script will iterate into each sample folder, then into each segmented cell type, 
+# then keep the csv files that we wish to compile in a metadata such as "Area", "Postion X", etc. as detailed below
 # and merge these csv into one csv file that is saved into the  sample folder.
  
 library(dplyr)
