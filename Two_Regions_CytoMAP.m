@@ -1,4 +1,4 @@
-%% This script ipens the MATLAB-based tool CytoMAP that has been developed to be used via a GUI
+%% This script opens the MATLAB-based tool CytoMAP that has been developed to be used via a GUI
 % Original publication: https://doi.org/10.1016/j.celrep.2020.107523
 
 % launch CytoMAP GUI
@@ -16,7 +16,7 @@ CytoMAP
 % of granularity required. Typically, with 4 cell types included, 6-8
 % clusters are a good place to start. Different models can be generated and
 % compared. Number of clusters can also be defined in an unsupervised way
-% using the DAvis-Boulding criterion which which calculates the ratio of
+% using the Davis-Bouldin criterion which calculates the ratio of
 % within-cluster to between-cluster distances
 
 % 4. Export the classified neighborhoods and cell types for further
